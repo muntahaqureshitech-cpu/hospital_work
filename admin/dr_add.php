@@ -1,7 +1,6 @@
 <?php 
 require_once "master/connection.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +17,7 @@ require_once "master/connection.php";
     ?>
     <div class="container-xxl">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-2">
                  <?php 
               require_once "master/side_nav.php";
             ?>
@@ -36,21 +35,7 @@ require_once "master/connection.php";
                     <input type="file" name="doctor_image" class="form-control my-2  " placeholder="Enter Doctor Image" required>
                     <input type="submit" name="submit" class="btn btn-primary my-2" value="Add Doctor">
                     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                 </div> 
                  </div>
+                 </body>
+                 </html>

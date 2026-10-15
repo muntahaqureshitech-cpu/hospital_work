@@ -1,5 +1,6 @@
 <?php
 require_once "master/connection.php";
+
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $doctor_name = $_POST["doctor_name"];
     $doctor_email = $_POST["doctor_email"];
@@ -11,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $imageName =  'images/' .rand(0000001, 9999999).$doctor_image;
     $tmp_name = $_FILES["doctor_image"]["tmp_name"];
 
-    $query = "INSERT INTO doctor_add(doctor_name, doctor_email, doctor_phone, doctor_password, doctor_education, doctor_specialist, doctor_image) VALUES ('$doctor_name','$doctor_email','$doctor_phone','$doctor_password','$doctor_education','$doctor_sp','$imageName')";
+    $query = "INSERT INTO doctor_add(doctor_name, doctor_email, doctor_phone, doctor_password, doctor_education, doctor_specialist,doctor_image) VALUES  ('$doctor_name','$doctor_email','$doctor_phone','$doctor_password','$doctor_education','$doctor_sp','$imageName')";
       $ins=mysqli_query($con, $query);
      if($ins){
        $upload = move_uploaded_file($tmp_name, $imageName);
