@@ -6,10 +6,12 @@
           <a class="nav-link" href="user.php">Users</a>
         </li>
             <li class="nav-item">
-          <a class="nav-link" href="doctors.php">Doctors</a>
+          <a class="nav-link" href="dr_add.php">Doctors Registeration</a>
         </li>
-            <li class="nav-item">
-          <a class="nav-link" href="appointment.php">Appointment</a>
+        <li>
+          <div class="nav-item">
+            <a class="nav-link" href="doctor_view.php">Doctors Data</a>
+          </div>
         </li>
-   
+        
       </ul>

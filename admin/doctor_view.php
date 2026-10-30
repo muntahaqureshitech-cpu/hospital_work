@@ -47,7 +47,7 @@ require_once "master/connection.php";
   <?php
     $query = "select * from doctor_add";
     $sel = mysqli_query($con,$query);
-    while($row = myaqli_fetch_assoc($sel)){
+    while($row = mysqli_fetch_assoc($sel)){
    ?>
     <tr>
        <th scope="row"><?php echo $row["doctor_id"];?></th>
@@ -59,7 +59,7 @@ require_once "master/connection.php";
         <td><?php echo $row["doctor_description"];?></td>
         <td><?php echo $row["doctor_days"];?></td>
         <td><?php echo $row["doctor_timing"];?></td>
-        <td><img src="<?php echo $row["doctor_img"]; ?>" class = "img_fluid"/><td>
+        <td><img src="<?php echo $row["doctor_image"]; ?>" class="img-fluid"/></td>
         <td><p><?php
             if($row["doctor_status"]==1){
                 echo "Active";
@@ -78,7 +78,7 @@ require_once "master/connection.php";
 </div>
 
 <?php
-require_once"master/linkjs.php"
+require_once "master/linkjs.php"
 ?>
 
 </body>

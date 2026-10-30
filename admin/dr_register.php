@@ -21,18 +21,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>window.location.href='dr_add.php';</script>";
        }
         else{
-        echo "<script>alert('Doctor Not Added');</script>";
+        echo "<script>alert('Image not uploaded');</script>";
         echo "<script>window.location.href='dr_add.php';</script>";
        }
         
     }
     else{
-        echo "<script>alert('Something Went Wrong');</script>";
+        echo "<script>alert('Dr. Not register');</script>";
         echo "<script>window.location.href='dr_add.php';</script>";
     }
 }
 else{
-    echo "<script>alert('Something Went Wrong');</script>";
+    echo "<script>alert('Fill form first');</script>";
     echo "<script>window.location.href='dr_add.php';</script>";
 }
 ?>

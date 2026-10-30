@@ -10,17 +10,17 @@
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link" href="about.php">About</a>
+          <a class="nav-link" href="about.php">About Us</a>
         </li>
             <li class="nav-item mx-3">
-          <a class="nav-link" href="services.php">Services</a>
+          <a class="nav-link" href="departments.php">Departments</a>
         </li>
             <li class="nav-item mx-3">
-          <a class="nav-link" href="contact.php">Contact</a>
+          <a class="nav-link" href="appointment.php">Appointment</a>
         </li>
    
       </ul>
-      <a href="#" class="btn btn-primary">Login</a>
+      <a  class="nav-link" href="login.php" class="btn btn-primary">Login</a>
   
 
     </div>
