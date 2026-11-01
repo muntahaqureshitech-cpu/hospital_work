@@ -51,8 +51,8 @@ require_once "master/connection.php";
       <td><?php echo $row["user_phone"]; ?></td>
       <td><?php echo $row["user_password"]; ?></td>
       <td>
-         <a href="#" class="btn btn-danger">Delete</a>
-         <a href="#" class="btn btn-primary">Edit</a>
+         <a href="delete.php?id=<?php echo $row["user_id"]; ?>" class="btn btn-danger">Delete</a>
+         <a href="edit.php?id=<?php echo $row["user_id"]; ?>" class="btn btn-primary">Edit</a>
       </td>
     </tr>
   <?php 

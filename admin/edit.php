@@ -3,15 +3,15 @@ $edit_id = $_GET["id"];
 require_once "master/connection.php";
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-     $user_name = $_POST["user_name"];
-    $user_email = $_POST["user_email"];
-    $user_phone = $_POST["user_phone"];
-    $user_password = $_POST["user_password"];
+     $doctor_name = $_POST["doctor_name"];
+    $doctor_email = $_POST["doctor_email"];
+    $doctor_phone = $_POST["doctor_phone"];
+    $doctor_password = $_POST["doctor_password"];
 
-    $query = "update hospital_new set name = '$user_name',email ='$user_email',phone = '$user_phone',password='$user_password' where id = '$edit_id'";
+    $query = "update doctor_add set doctor_name = '$doctor_name',doctor_email ='$doctor_email',doctor_phone = '$doctor_phone',doctor_password='$doctor_password' where doctor_id = '$edit_id'";
     $edit = mysqli_query($con,$query);
     if($edit){
-  echo "<script>alert('User Edit');</script>";
+  echo "<script>alert('doctor Edit');</script>";
     echo "<script>window.location='select.php';</script>";  
     }
 }
@@ -31,18 +31,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <div class="container-xxl">
         <div class="row">
             <div class="col-lg-5 mx-auto">
-             <h1>User Edit</h1>    
+             <h1>doctor Edit</h1>    
                 <form method="post">
                     <?php 
-                     $query = "select * from hospital_new where id = '$edit_id'";
+                     $query = "select * from doctor_add where doctor_id = '$edit_id'";
                      $sel = mysqli_query($con, $query);
                      while($row = mysqli_fetch_assoc($sel)){
                       
                     ?>
-                   <input type="text" name="user_name" value="<?php echo $row['name']; ?>" placeholder="Name" class="form-control my-3">
-                   <input type="email" name="user_email" value="<?php echo $row['email']; ?>" placeholder="Email" class="form-control my-3">
-                   <input type="number" name="user_phone" value="<?php echo $row['phone']; ?>" placeholder="Phone" class="form-control my-3">
-                   <input type="text" name="user_password" value="<?php echo $row['password']; ?>" placeholder="Password" class="form-control my-3">
+                   <input type="text" name="doctor_name" value="<?php echo $row['doctor_name']; ?>" placeholder="Name" class="form-control my-3">
+                   <input type="email" name="doctor_email" value="<?php echo $row['doctor_email']; ?>" placeholder="Email" class="form-control my-3">
+                   <input type="number" name="doctor_phone" value="<?php echo $row['doctor_phone']; ?>" placeholder="Phone" class="form-control my-3">
+                   <input type="text" name="doctor_password" value="<?php echo $row['doctor_password']; ?>" placeholder="Password" class="form-control my-3">
                    <input type="submit" value="Save Changes" class="btn btn-info">
                    <?php 
                      }

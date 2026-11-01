@@ -60,10 +60,15 @@ require_once "master/connection.php";
         <td><?php echo $row["doctor_days"];?></td>
         <td><?php echo $row["doctor_timing"];?></td>
         <td><img src="<?php echo $row["doctor_image"]; ?>" class="img-fluid"/></td>
-        <td><p><?php
+        <td>
+            <p><?php
             if($row["doctor_status"]==1){
                 echo "Active";
-            }?></p>
+            }?>
+            
+            <a href="dr_delete.php?id=<?php echo $row["doctor_id"]; ?>" class="btn btn-danger">Delete</a>
+         <a href="edit.php?id=<?php echo $row["doctor_id"]; ?>" class="btn btn-primary">Edit</a>
+        </p>
         </td>
     </tr>
     <?php

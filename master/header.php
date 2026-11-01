@@ -21,6 +21,7 @@
    
       </ul>
       <a  class="nav-link" href="login.php" class="btn btn-primary">Login</a>
+      <a  class="nav-link" href="signup.php" class="btn btn-primary">Signup</a>
   
 
     </div>
